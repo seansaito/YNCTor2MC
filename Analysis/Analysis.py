@@ -15,7 +15,7 @@ def as_analysis (relay_list):
         or_addresses = relay['or_addresses']
         weight = relay['consensus_weight_fraction']
         fingerprint = [relay['fingerprint']]
-        country = [relay.get('country'), Unknown]
+        country = [relay.get('country_name', [])]
         if as_dictionary.get(as_number, default) == default:
             relay_dict['weight'] = weight
             relay_dict['bw'] = bw
